@@ -109,19 +109,6 @@ def main(batch_size, num_workers, epochs, load_weights=False):
     torch.save(network.state_dict(), f"./../weights/{name}.h5")
     print('All Done!')
 
-    """ 
-    ----------Tests with Ordered Retrieval------------
-                      1       2       3       4       5
-    -----------  ------  ------  ------  ------  ------
-    Precision@k  88.204  83.998  78.299  71.008  63.853
-    nDCG@k       88.204  85.183  82.034  79.237  77.298
-    PSprec@k     43.622  50.605  54.797  56.864  58.021
-    PSnDCG@k     43.622  48.873  52.066  53.943  55.080
-    All Done!
-
-    Process finished with exit code 0
-    """
-
 
 if __name__ == '__main__':
     # os.environ["CUDA_VISIBLE_DEVICES"] = "2"

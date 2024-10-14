@@ -81,7 +81,7 @@ def normal(shape, std):
 if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-    sampler_, module_ = vtb(batch_size=10, input_dim=32)
+    sampler_, module_ = vtb(batch_size=10, input_dim=32, device=device)
     x = sampler_.tensor((10, 3, 32, 32)).to(device)
     y = sampler_.tensor((10, 3, 32, 32)).to(device)
 

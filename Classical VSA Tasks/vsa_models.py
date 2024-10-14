@@ -55,13 +55,13 @@ class HLBTensor(VSATensor):
 
     @classmethod
     def identity(
-        cls,
-        num_vectors: int,
-        dimensions: int,
-        *,
-        dtype=None,
-        device=None,
-        requires_grad=False,
+            cls,
+            num_vectors: int,
+            dimensions: int,
+            *,
+            dtype=None,
+            device=None,
+            requires_grad=False,
     ) -> "HLBTensor":
         """Creates identity hypervectors for binding"""
 
@@ -84,14 +84,14 @@ class HLBTensor(VSATensor):
 
     @classmethod
     def random(
-        cls,
-        num_vectors: int,
-        dimensions: int,
-        *,
-        dtype=None,
-        device=None,
-        generator=None,
-        requires_grad=False,
+            cls,
+            num_vectors: int,
+            dimensions: int,
+            *,
+            dtype=None,
+            device=None,
+            generator=None,
+            requires_grad=False,
     ) -> "HLBTensor":
         """Creates random or uncorrelated hypervectors"""
         if dtype is None:
@@ -226,13 +226,13 @@ class MAPCTensor(VSATensor):
 
     @classmethod
     def empty(
-        cls,
-        num_vectors: int,
-        dimensions: int,
-        *,
-        dtype=None,
-        device=None,
-        requires_grad=False,
+            cls,
+            num_vectors: int,
+            dimensions: int,
+            *,
+            dtype=None,
+            device=None,
+            requires_grad=False,
     ) -> "MAPCTensor":
         r"""Creates a set of hypervectors representing empty sets.
 
@@ -266,13 +266,13 @@ class MAPCTensor(VSATensor):
 
     @classmethod
     def identity(
-        cls,
-        num_vectors: int,
-        dimensions: int,
-        *,
-        dtype=None,
-        device=None,
-        requires_grad=False,
+            cls,
+            num_vectors: int,
+            dimensions: int,
+            *,
+            dtype=None,
+            device=None,
+            requires_grad=False,
     ) -> "MAPCTensor":
         r"""Creates a set of identity hypervectors.
 
@@ -307,14 +307,14 @@ class MAPCTensor(VSATensor):
 
     @classmethod
     def random(
-        cls,
-        num_vectors: int,
-        dimensions: int,
-        *,
-        generator=None,
-        dtype=None,
-        device=None,
-        requires_grad=False,
+            cls,
+            num_vectors: int,
+            dimensions: int,
+            *,
+            generator=None,
+            dtype=None,
+            device=None,
+            requires_grad=False,
     ) -> "MAPCTensor":
         r"""Creates a set of random independent hypervectors.
 

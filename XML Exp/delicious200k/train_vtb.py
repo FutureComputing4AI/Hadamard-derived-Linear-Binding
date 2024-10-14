@@ -115,19 +115,6 @@ def main(batch_size, num_workers, epochs, load_weights=False):
 
     print('All Done!')
 
-    """ 
-    ----------Tests with Ordered Retrieval------------
-                      1       2       3       4       5
-    -----------  ------  ------  ------  ------  ------
-    Precision@k  44.092  41.141  39.220  37.744  36.496
-    nDCG@k       44.092  41.838  40.369  39.242  38.293
-    PSprec@k      6.664   7.185   7.634   8.019   8.353
-    PSnDCG@k      6.664   7.034   7.332   7.576   7.778
-    All Done!
-
-    Process finished with exit code 0
-    """
-
 
 if __name__ == '__main__':
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"

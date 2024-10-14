@@ -30,7 +30,6 @@ loss_function = torch.nn.BCELoss()
 optimizer = torch.optim.Adam(network.parameters(), lr=1e-3)
 scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.98)
 
-
 logger = collections.defaultdict(list)
 
 for epoch in range(1, epochs + 1):
@@ -111,16 +110,3 @@ print(f'test loss: {logger["test_loss"][-1]:>6.4f}, '
 
 display_metrics(logger["metrics"])
 print('All Done!')
-
-""" 
-----------Tests with Ordered Retrieval------------
-                  1       2       3       4       5
------------  ------  ------  ------  ------  ------
-Precision@k  63.325  61.128  59.163  56.962  54.728
-nDCG@k       63.325  61.645  60.160  58.564  56.971
-PSprec@k     31.449  32.483  33.377  33.784  34.003
-PSnDCG@k     31.449  32.242  32.904  33.242  33.443
-All Done!
-
-Process finished with exit code 0
-"""

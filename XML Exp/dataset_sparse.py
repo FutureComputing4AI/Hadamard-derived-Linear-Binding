@@ -115,29 +115,9 @@ def load_dataset(train_file, test_file, batch_size, num_workers=0, pin_memory=Fa
 
 
 if __name__ == '__main__':
-    # train_, test, io = load_dataset(train_file=f"./data/DeliciousLarge/deliciousLarge_train.txt",
-    #                                 test_file=f"./data/DeliciousLarge/deliciousLarge_test.txt",
-    #                                 batch_size=64,
-    #                                 num_workers=0)
-    #
-    # cache_propensity(train_, io, "delicious200k", root='.')
-
     train_, test, io = load_dataset(train_file=f"./data/Amazon670K.bow/train.txt",
                                     test_file=f"./data/Amazon670K.bow/test.txt",
                                     batch_size=64,
                                     num_workers=0)
 
     cache_propensity(train_, io, "amazon670k1", root='.')
-
-    # train_, test, io = load_dataset(train_file=f"./data/AmazonCat-13K.bow/train.txt",
-    #                                 test_file=f"./data/AmazonCat-13K.bow/test.txt",
-    #                                 batch_size=64,
-    #                                 num_workers=0)
-    # cache_propensity(train_, io, "amazon13k", root='.')
-    # max_ = 0
-    # for x_, y_ in tqdm(test):
-    #     mask = torch.where(x_ > 0., 1., 0.)
-    #     mask = torch.sum(mask, dim=-1)
-    #     max_ = max(max_, torch.max(mask))
-    #
-    # print(max_)
