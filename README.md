@@ -36,7 +36,7 @@ Classical VSA Tasks
       downloaded from [Kaggle](https://www.kaggle.com/datasets/arjunashok33/miniimagenet).
 * XML
     - For XML experiments pre-processed features are used. All the datasets can be downloaded from the
-      benchmark [website](manikvarma.org/downloads/XC/XMLRepository.html).
+      benchmark [website](http://manikvarma.org/downloads/XC/XMLRepository.html).
 
 ### Code
 
@@ -50,3 +50,20 @@ Similarly, the ```XML Exp/``` folder contains subfolders for each dataset contai
 training files are named as $train_{method name}.py$ Two types of data loader are used. ```dataset_fast.py``` is a fast
 dataloader for smaller datasets (Bibtex, Mediamill, Delicious). ```dataset_sparse.py``` is a dataloader for loading
 larger data files. Code regarding the classical VSA tasks is in the ```Classical VSA Tasks/``` folder.
+
+### Citations
+<img src="https://github.com/user-attachments/assets/81faccca-ab19-45ee-b33d-8782205f7704" width=200>
+
+[![Paper](https://img.shields.io/badge/NeurIPS-2024-7a09d6.svg?longCache=true&style=flat)](https://neurips.cc/virtual/2024/poster/93583)
+[![Paper](https://img.shields.io/badge/paper-ArXiv-ff0a0a.svg?longCache=true&style=flat)](https://arxiv.org/abs/2410.22669)
+
+To get more information about the proposed method and experiments, please go through the [paper](https://arxiv.org/abs/2410.22669). If you use this work or find this useful, cite the paper as:
+
+```bibtex
+@article{alam2024walsh,
+  title={A Walsh Hadamard Derived Linear Vector Symbolic Architecture},
+  author={Alam, Mohammad Mahmudul and Oberle, Alexander and Raff, Edward and Biderman, Stella and Oates, Tim and Holt, James},
+  journal={arXiv preprint arXiv:2410.22669},
+  year={2024}
+}
+```
