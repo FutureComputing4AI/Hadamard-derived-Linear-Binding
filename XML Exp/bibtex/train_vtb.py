@@ -17,7 +17,8 @@ train_loader, test_loader, info = load_dataset(data_file=f"../data/{name.capital
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 print(f"Loaded {name} data. Available device: {device}.")
 
-network = Network(in_features=info["features"], hidden=512, out_features=400, labels=info["labels"])
+network = Network(in_features=info["features"], hidden=512, out_features=400, labels=info["labels"],
+                  requires_grad=False, negative=True, factor=1, drop_rate=0.25)
 network.to(device)
 # network.load_state_dict(torch.load(f"./../weights/{name}.h5"))
 

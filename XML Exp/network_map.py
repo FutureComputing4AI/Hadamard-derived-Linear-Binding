@@ -37,14 +37,14 @@ class Network(nn.Module):
 
         cp = logits * self.pos
         pos = torch.sum(self.cls * mask, dim=1)
-        cosine = torch.abs(cosine_similarity(pos, cp, dim=-1))
+        cosine = torch.relu(cosine_similarity(pos, cp, dim=-1))
         jp = torch.mean(1 - cosine)
 
         jn = 0.
         if self.negative:
             cn = logits * self.neg
             neg = torch.sum(self.cls * (1. - mask), dim=1)
-            cosine = torch.abs(cosine_similarity(neg, cn, dim=-1))
+            cosine = torch.relu(cosine_similarity(neg, cn, dim=-1))
             jn = torch.mean(cosine)
 
         return jp + jn
@@ -52,4 +52,4 @@ class Network(nn.Module):
     def inference(self, logits):
         unbind = logits * self.pos
         unbind = torch.unsqueeze(unbind, dim=1)
-        return torch.abs(cosine_similarity(unbind, self.cls, dim=-1))
+        return torch.relu(cosine_similarity(unbind, self.cls, dim=-1))
