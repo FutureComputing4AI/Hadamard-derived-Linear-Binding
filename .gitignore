@@ -5,3 +5,5 @@ data/
 *.npy
 *.h5
 *.zip
+data/
+weights/
